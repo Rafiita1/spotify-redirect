@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Redirigiendo a Spotify...</title>
-    <script>
-      window.onload = function() {
-        window.location.href = "https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF";
-      }
-    </script>
-  </head>
-  <body>
-    <p>Abriendo tu canción en Spotify...</p>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo a Spotify...</title>
+</head>
+<body>
+  <p>Abriendo tu canción en Spotify...</p>
+  <a id="redir" href="https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF" target="_blank">Haz clic aquí si no se abre automáticamente</a>
+
+  <script>
+    // Forzar clic en el enlace para que el navegador lo permita
+    window.onload = function() {
+      document.getElementById('redir').click();
+    };
+  </script>
+</body>
 </html>
