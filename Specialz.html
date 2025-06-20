@@ -2,24 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Redirigiendo a YouTube...</title>
+  <title>Abriendo en YouTube...</title>
 </head>
-<body>
+<body style="font-family: sans-serif; text-align: center; padding: 50px;">
   <h2>Abriendo tu vídeo en YouTube</h2>
-  <p>Si no se abre automáticamente, pulsa el botón:</p>
+  <p>Si no se abre automáticamente, toca el botón:</p>
 
-  <!-- Link especial con INTENT para Android -->
-  <a id="ytLink"
-     href="intent://www.youtube.com/watch?v=5yb2N3pnztU#Intent;package=com.google.android.youtube;scheme=https;end;"
-     style="display:inline-block; padding:1em; background:#FF0000; color:white; text-decoration:none; border-radius:5px;">
+  <!-- Intent URL para Android -->
+  <a href="intent://www.youtube.com/watch?v=5yb2N3pnztU#Intent;package=com.google.android.youtube;scheme=https;end;"
+     style="display: inline-block; padding: 15px 30px; background: #FF0000; color: white; text-decoration: none; border-radius: 8px; font-size: 18px;">
     ▶ Abrir en YouTube
   </a>
 
-  <script>
-    // Intentar forzar click para usuarios que permitan scripts
-    window.onload = function() {
-      document.getElementById('ytLink').click();
-    };
-  </script>
+  <br><br>
+
+  <!-- Fallback HTTPS por si el intent falla -->
+  <a href="https://www.youtube.com/watch?v=5yb2N3pnztU"
+     style="display: inline-block; margin-top: 20px; color: #333;">
+    Ver en la web
+  </a>
 </body>
 </html>
