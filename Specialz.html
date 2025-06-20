@@ -2,16 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Redirigiendo a Spotify...</title>
+  <title>Redirigiendo a YouTube...</title>
 </head>
 <body>
-  <p>Abriendo tu canción en Spotify...</p>
-  <a id="redir" href="https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF" target="_blank">Haz clic aquí si no se abre automáticamente</a>
+  <h2>Abriendo tu vídeo en YouTube</h2>
+  <p>Si no se abre automáticamente, pulsa el botón:</p>
+
+  <!-- Link especial con INTENT para Android -->
+  <a id="ytLink"
+     href="intent://www.youtube.com/watch?v=5yb2N3pnztU#Intent;package=com.google.android.youtube;scheme=https;end;"
+     style="display:inline-block; padding:1em; background:#FF0000; color:white; text-decoration:none; border-radius:5px;">
+    ▶ Abrir en YouTube
+  </a>
 
   <script>
-    // Forzar clic en el enlace para que el navegador lo permita
+    // Intentar forzar click para usuarios que permitan scripts
     window.onload = function() {
-      document.getElementById('redir').click();
+      document.getElementById('ytLink').click();
     };
   </script>
 </body>
